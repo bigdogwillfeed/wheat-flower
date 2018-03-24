@@ -56,8 +56,11 @@ footer {
   margin-top: 30px;
   padding-top: 25px;
   border-top: 1px solid grey;
+  color: grey;
+  text-align: center;
 }
 
-#remix {
-  color: grey;
+.glitchButton {
+  top: 1em;
+  right: 1em;
 }

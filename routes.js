@@ -6,7 +6,8 @@ module.exports = function(app) {
   // the main page
   app.get("/", function (request, response) {
     response.render('index', {
-      title: boganisms.one()
+      title: boganisms.one(),
+      projectName: process.env.PROJECT_NAME,
     });
   });
   
