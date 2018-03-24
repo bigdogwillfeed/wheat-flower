@@ -1,5 +1,6 @@
 // init project
-var express = require('express'),
+var pkg = require('./package'),
+    express = require('express'),
     app = express(),
     nunjucks = require('nunjucks'),
     bodyparser = require('body-parser');
@@ -23,6 +24,6 @@ app.use(bodyparser.urlencoded({extended: true}));
 require('./routes')(app);
 
 // listen for requests :)
-var listener = app.listen(process.env.PORT, function () {
-  console.log('Your app is listening on port ' + listener.address().port);
+app.listen(process.env.PORT, function () {
+  console.log(`✨🇦🇺🚀 ${pkg.name} v${pkg.version} running node ${process.version} on port ${this.address().port} ✨🇦🇺🚀`);
 });
